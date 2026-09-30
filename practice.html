@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                /*
+            Create a while loop that counts from 1 to 5 and prints each number.
+Create a program that keeps asking for a password until the user types "open123".
+Rewrite that same program using a do...while loop.
+Modify the login example to limit the user to 3 attempts before saying “Access denied.”
+
+            */
+
+            let num = 1;
+            while (num <= 5) {
+                console.log(num);
+                num++; //important! otherwise it's infinite
+            }
+
+            let pw = "";
+            while (pw !== "open123") {
+                pw = prompt("enter the password");
+            }
+            alert("We're out!");
+
+            pw = "";
+            do {
+                pw = prompt("enter the password");
+            } while (pw !== "open123");
+            alert("We're out!");
+
+            let attempts = 3;
+            let pass = "dont you";
+            while (pass != "open123" && attempts > 0) {
+                pass = window.prompt(
+                    "passsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+                );
+                attempts--;
+            }
+            if (pass == "open123") {
+                console.log("you good boyyyyyyyy");
+            } else {
+                console.log("you smart  ape");
+            }
+    </script>
+</body>
+</html>
